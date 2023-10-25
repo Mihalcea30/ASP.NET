@@ -16,20 +16,45 @@ namespace tema_lab2.Controllers
             new Studenti { Id = 1, Name = "Tudor", Age = 30},
         };
 
-            // endpoint 
-            // Get 
-            [HttpGet]
-            public List<Studenti> getAllOrdered()
-            {
-                return students.OrderBy(s => s.Name).ToList();
-            }
-            // delete
-            [HttpDelete]
-            public List<Studenti> Delete(Studenti student)
-            {
-                var studentIndex = students.FindIndex(x => x.Id == student.Id);
-                students.RemoveAt(studentIndex);
-                return students;
-            }
+        // endpoint 
+        // Get 
+ 
+        /*[HttpGet]
+        public List<Studenti> Get()
+        {
+            return students.OrderBy(o => o.Age).ToList();
+        }*/
+
+        [HttpGet]
+        public List<Studenti>getAllOrdered()
+        {
+            return students.OrderBy(o => o.Name).ToList();
+        }
+
+
+        [HttpPost]
+        public List<Studenti> Add(Studenti student)
+        {
+            students.Add(student);
+            return students;
+        }
+
+
+        /*[HttpDelete]
+        public List<Studenti> Delete(Studenti student)
+        {
+            var studentIndex = students.FindIndex(x => x.Id == student.Id);
+            students.RemoveAt(studentIndex);
+            return students;
+        }*/
+
+        [HttpDelete]
+
+        public List<Studenti> NewDelete(Studenti student)
+        {
+            var studentIndex = students.FindIndex(x => x.Age == student.Age);
+            students.RemoveAt(studentIndex);
+            return students;
+        }
     }
     }
