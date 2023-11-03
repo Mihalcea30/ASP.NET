@@ -1,5 +1,5 @@
 ﻿
-using Lab3_23.Models.Base;
+using Lab3.Models.Base;
 
 namespace Lab3.Models
 {

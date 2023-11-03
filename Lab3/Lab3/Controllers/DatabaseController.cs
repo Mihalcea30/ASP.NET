@@ -19,7 +19,7 @@ namespace Lab3.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _lab3Context.Students.ToListAsync());
+            return Ok(await _lab3Context.Cars.ToListAsync());
         }
     }
 }
