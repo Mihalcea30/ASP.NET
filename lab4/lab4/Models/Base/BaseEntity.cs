@@ -12,5 +12,6 @@ namespace lab4.Models.Base
         public DateTime? DateCreated { get; set; }
 
         public DateTime? DateModified { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

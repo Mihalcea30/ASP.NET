@@ -9,6 +9,7 @@ namespace lab4.Data
     public class Lab4Context : DbContext
     {
         public DbSet<Student> Students { get; set; }
+        public DbSet<Car> Cars { get; set; }
 
 
         // One to One
